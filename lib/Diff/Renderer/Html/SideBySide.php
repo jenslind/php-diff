@@ -75,7 +75,7 @@ class Diff_Renderer_Html_SideBySide extends Diff_Renderer_Html_Array
 			}
 
 			foreach($blocks as $change) {
-				$html .= '<tbody class="Change'.ucfirst($change['tag']).'">';
+				$html .= '<tbody class="change-'.$change['tag'].'">';
 				// Equal changes should be shown on both sides of the diff
 				if($change['tag'] == 'equal') {
 					foreach($change['base']['lines'] as $no => $line) {
